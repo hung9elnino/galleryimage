@@ -1,0 +1,119 @@
+:root{
+    --pink-color: #e26e70;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient( 45deg, rgb(65, 88, 208) 0%, rgb(200, 80, 192) 50%, rgb(255, 204, 112) 100% );;
+    display: flex;
+}
+
+.wrapper{
+    width: 1200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.image{
+    width: 22%;
+    height: 280px;
+    overflow: hidden;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.image:hover img{
+    transform: scale(1.2);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.25s;
+}
+
+.gallery {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    display: flex;
+    z-index: 1;
+    opacity: 0;
+    align-items: center;
+    pointer-events: none;
+    transform: scale(0.8);
+    transition: 0.5s;
+}
+
+
+.gallery-inner {
+    width: 40%;
+    height: 80%;
+    margin: auto;
+}
+
+.gallery-inner i{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.control{
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.control:hover i{
+    color: #4e4d4d;
+}
+
+.prev{
+    left: 90px; 
+}
+
+.next{
+    right: 15px;
+}
+
+.bx{
+    color: white;
+    position: absolute;
+    font-size: 40px;
+    cursor: pointer;
+    top: 15px;
+    right: 25px;
+}
+
+.close:hover .bx{
+    color: #4e4d4d;
+}
+
+.show{
+    opacity: 1;
+    pointer-events:auto ;
+    transform: scale(1);
+}
+
+.hide{
+    display: none;
+}
